@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <%= form_with model: [@article, @article.comments.build], class: "needs-validation", local: true do |form| %>
+    <!-- Campo Nome do Comentador -->
+    <div class="mb-3">
+      <%= form.label :commenter, "Nome", class: "form-label" %>
+      <%= form.text_field :commenter, class: "form-control", required: true %>
+    </div>
+
+    <!-- Campo Corpo do Comentário -->
+    <div class="mb-3">
+      <%= form.label :body, "Comentário", class: "form-label" %>
+      <%= form.text_area :body, class: "form-control", rows: 5, required: true %>
+    </div>
+
+    <!-- Campo Status -->
+    <div class="mb-3">
+      <%= form.label :status, "Status", class: "form-label" %>
+      <%= form.select :status, ['public', 'private', 'archived'], { selected: 'public' }, class: "form-select" %>
+    </div>
+
+    <!-- Botão de Submissão -->
+    <div class="mb-3">
+      <%= form.submit "Enviar Comentário", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

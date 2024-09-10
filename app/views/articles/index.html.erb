@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <h1 class="display-4 mb-4">Artigos</h1>
+
+  <h5 class="text-secondary mb-3">
+    Esse blog possui <strong><%= Article.public_count %></strong> artigos públicos e contando!
+  </h5>
+
+  <%= form_with url: articles_path, method: :get, local: true, class: "mb-4" do |form| %>
+    <div class="input-group">
+      <%= form.text_field :search, value: params[:search], placeholder: "Buscar por nome", class: "form-control" %>
+      <div class="input-group-append">
+        <%= form.submit "Filtrar", class: "btn btn-outline-secondary" %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to "Criar um novo artigo", new_article_path, class: "btn btn-primary mb-4" %>
+
+  <ul class="list-group">
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <li class="list-group-item">
+          <%= link_to article.title, article, class: "text-decoration-none" %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
