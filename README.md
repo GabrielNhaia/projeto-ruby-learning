@@ -27,7 +27,7 @@
   <h2>Como Executar o Projeto</h2>
   <ol>
     <li>Clone o repositório:
-      <pre><code>git clone https://github.com/seu-usuario/seu-repositorio.git
+      <pre><code>git clone https://github.com/GabrielNhaia/projeto-ruby-learning
 cd seu-repositorio
       </code></pre>
     </li>
