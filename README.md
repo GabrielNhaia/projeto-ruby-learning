@@ -74,22 +74,5 @@ rails db:migrate
       </ul>
     </li>
   </ul>
-
-  <h2>Contribuindo</h2>
-  <p>
-    Sinta-se à vontade para contribuir com melhorias. Para isso, siga os passos abaixo:
-  </p>
-  <ol>
-    <li>Faça um fork do projeto.</li>
-    <li>Crie uma branch para sua feature (<code>git checkout -b minha-feature</code>).</li>
-    <li>Faça commit das suas alterações (<code>git commit -m 'Adiciona minha feature'</code>).</li>
-    <li>Envie para a branch principal (<code>git push origin minha-feature</code>).</li>
-    <li>Abra um Pull Request.</li>
-  </ol>
-
-  <h2>Licença</h2>
-  <p>
-    Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
-  </p>
 </body>
 </html>
